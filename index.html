@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parejas</title>
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        display: grid;
+        padding-top: 20px;
+        grid-template-columns: 1fr 400px 1fr;
+        grid-template-rows: auto;
+      }
+      #gameContainer {
+        display: none;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+      }
+      #mainMenu {
+        width: 400px;
+        justify-self: center;
+        text-align: center;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+      }
+      #finalMenu {
+        width: 200px;
+        cursor: pointer;
+        display: none;
+        justify-self: center;
+        text-align: center;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+      }
+      .material-icons.md-60 {
+        font-size: 60px;
+      }
+      img {
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="gameContainer"></div>
+    <div id="mainMenu">
+      <button class="btn btn-success btn m-2">Jugar</button>
+      <fieldset class="form-group">
+        <legend>Nivel</legend>
+        <input type="number" min="1" max="8" id="nivel" value="2" />
+      </fieldset>
+    </div>
+    <div id="finalMenu">
+      <p style="font-size: 100px;"></p>
+      <div class="material-icons md-60">
+        replay
+      </div>
+    </div>
+
+    <script src="parejas.js"></script>
+  </body>
+</html>
